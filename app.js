@@ -38,6 +38,14 @@ const _ = {
             return false;
         }
         return hasValue;
+    },
+    invert(object) {
+        let invertedObject = {};
+        for (key in object) {
+            let originalValue = object[key];
+            invertedObject.originalValue = key;
+        }
+        return invertedObject;
     }
 };
 

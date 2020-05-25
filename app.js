@@ -51,11 +51,13 @@ const _ = {
         for (key in object) {
             let value = object[key];
             let predicateReturnValue = predicate(value);
-            if (predicateReturnValue === true) {
-                return object[key];
+            if (predicateReturnValue) {
+                return key;
             }
         }
-    };
+        return undefined;
+    }
+};
 
-    // Do not write or modify code below this line.
-    module.exports = _;
+// Do not write or modify code below this line.
+module.exports = _;
